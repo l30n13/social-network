@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    /*background: url("http://php.local/Social%20Network/public/images/back.jpg");*/
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background: #567;
+}
+
+.name_and_login_signup {
+}
+
+.company-name {
+    font-size: 25px;
+    color: #081726;
+    margin-left: 1%;
+    padding: 5px 20px 5px 20px;
+    float: left;
+    background: #579bff;
+    transition: background .5s;
+    -webkit-transition: background .5s;
+}
+
+.company-name:hover {
+    color: #f0f0f0;
+    border-radius: 5px;
+    background: #081726;
+    cursor: pointer;
+}
+
+.login-signup {
+    width: auto;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+}
+
+.profile_ {
+    margin-top: 3px;
+    float: right;
+    margin-right: 10px;
+    width: auto;
+    height: 20px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+.profile_:hover {
+    background: #3399cc;
+    border-radius: 5px;
+    box-shadow: #081726 5px 5px 50px;
+}
+
+.profile_.active {
+    background: #3399cc;
+    border-radius: 5px;
+    box-shadow: #081726 5px 5px 50px;
+}
+
+.container {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    /*border: 1px black solid;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.error {
+    margin-top: 10%;
+    align-content: center;
+    text-align: center;
+}
