@@ -40,7 +40,7 @@
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
-                    <div class="profile_name" style="float: left">
+                    <div class="profile_name" style="padding-top:3px; float: left">
                         <?= Session::get('name') ?>
                     </div>
                 </div>
@@ -48,11 +48,9 @@
                     <div id="profile_triangle"></div>
 
                     <div id="profile_body">
+                        <a href="#"><p>Profile</p></a>
                         <a href="#"><p>Friends</p></a>
-                        <a href="#"><p>Friends</p></a>
-                        <a href="#"><p>Friends</p></a>
-                        <a href="#"><p>Friends</p></a>
-                        <a href="#"><p>Friends</p></a>
+                        <a href="#"><p>Messages</p></a>
                     </div>
                 </div>
             <?php else: ?>
