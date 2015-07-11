@@ -63,7 +63,7 @@ body {
     box-shadow: #081726 5px 5px 50px;
 }
 
-.profile_.active {
+.profile_ > .active {
     background: #3399cc;
     border-radius: 5px;
     box-shadow: #081726 5px 5px 50px;

@@ -1,4 +1,4 @@
-$(function (e) {
+$(function () {
     $('.container').click(function () {
         $('#signup').slideUp();
         $('#login').slideUp();

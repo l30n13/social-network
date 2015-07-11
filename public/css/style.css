@@ -150,7 +150,7 @@ a {
     color: #555;
 }
 
-#signup select{
+#signup select {
     width: 98.5%;
     background: #fff;
     margin-bottom: 2%;
@@ -160,6 +160,7 @@ a {
     font-size: 95%;
     color: #555;
 }
+
 input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
     width: 92%;
     background: #fff;
