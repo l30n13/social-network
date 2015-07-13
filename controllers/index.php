@@ -10,9 +10,16 @@ class Index extends Controller {
     function index() {
         $this->create_db();
         $this->view->title = 'Home';
-        $this->view->render('header');
-        $this->view->render('index/index');
-        $this->view->render('footer');
+        Session::init();
+        if (Session::get("loggedIn") == false){
+            $this->view->render('header');
+            $this->view->render('index/index');
+            $this->view->render('footer');
+        }else{
+            $this->view->render('header');
+            $this->view->render('home/index');
+            $this->view->render('footer');
+        }
     }
 
     function login() {
