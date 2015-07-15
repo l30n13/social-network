@@ -3,6 +3,7 @@ $(function () {
         $('#signup').slideUp();
         $('#login').slideUp();
         $('#profile_').slideUp();
+        $(".search_result").slideUp();
     });
     $('#toggle-login').click(function () {
         $('#login').slideToggle();
@@ -16,5 +17,12 @@ $(function () {
         $('#profile_').slideToggle();
         $(this).toggleClass('active');
     });
-
 });
+
+function editThis(id) {
+    location = window.URL + "profile/edit?id=" + id;
+}
+
+function cancelThis(id) {
+    location = window.URL + "profile?id=" + id;
+}

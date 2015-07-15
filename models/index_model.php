@@ -24,9 +24,12 @@ class Index_Model extends Model {
         $count = $sth->rowCount();
 
         if ($count > 0) {
+           /* $sth = $this->db->prepare("UPDATE profile SET `logged_in` = 1 WHERE `profile_id` = $data[profile_id]");
+            $sth->execute();*/
             //login
             Session::init();
-            Session::set('role', $data['email_id']);
+            Session::set('profile_id', $data['profile_id']);
+            Session::set('email', $data['email_id']);
             Session::set('name', $name);
             Session::set('gender', $data['gender']);
             Session::set('loggedIn', true);
@@ -42,6 +45,7 @@ class Index_Model extends Model {
         $f_name = filter_input(INPUT_POST, 'f_name');
         $m_name = filter_input(INPUT_POST, 'm_name');
         $l_name = filter_input(INPUT_POST, 'l_name');
+        $gender = filter_input(INPUT_POST, 'gender');
         $date = filter_input(INPUT_POST, 'birth_date');
         $date = explode('-', $date);
         $birth_year = $date[0];
@@ -55,6 +59,7 @@ class Index_Model extends Model {
             'first_name' => $f_name,
             'middle_name' => $m_name,
             'last_name' => $l_name,
+            'gender' => $gender,
             'birth_date' => $birth_date,
             'birth_month' => $birth_month,
             'birth_year' => $birth_year,
@@ -67,7 +72,7 @@ class Index_Model extends Model {
 
             echo('<script>alert("Signed up successfully");</script>');
 
-            //header("location:" . URL);
+            header("location:" . URL);
         }
     }
 }

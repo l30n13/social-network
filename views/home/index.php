@@ -1,2 +1,7 @@
-<?= $this->msg ?><br>
-<img src="<?= URL ?>public/images/No Idea.jpg"/>
+<div class="main_body">
+    sdfkjsn skdfjn
+</div>
+
+<div class="online_friends">
+    slgkmsvlkm sdvkdsvndsvn dsln
+</div>

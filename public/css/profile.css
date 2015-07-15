@@ -1,0 +1,62 @@
+.body {
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.profile_img {
+    float: left;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    padding: 0;
+}
+
+.profile_details {
+    float: left;
+    padding: 10px;
+    width: 650px;
+    /*border: 1px solid;*/
+}
+
+.edit_option {
+    font-size: 18px;
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border: 1px solid;*/
+    border-collapse: collapse;
+}
+
+.edit_option input{
+    width: 100%;
+    background: #fff;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    padding: 1%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 95%;
+    color: #555;
+}
+
+.edit_option td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.edit {
+    width: 20px;
+    height: 20px;
+    float: right;
+    padding: 10px;
+    border: 1px #f0f0f0 solid;
+    background: #574390;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 25%;
+}
+
+.edit:hover {
+    box-shadow: 5px 5px 10px;
+}

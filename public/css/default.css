@@ -1,4 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(home.css);
+@import url(profile.css);
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 
 body {
     margin: 0 auto;
@@ -84,4 +90,82 @@ body {
     margin-top: 10%;
     align-content: center;
     text-align: center;
+}
+
+.search {
+    width: auto;
+    height: auto;
+    padding: 0 0 0 10px;
+    float: left;
+}
+
+.search-icon {
+    float: left;
+    background: #4c9693;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 6px 5px 4px 5px;
+    border: 1px solid #f0f0f0;
+}
+
+.search-box {
+    float: left;
+    height: 34px;
+    padding-top: 2px;
+}
+
+.search-box input[type="search"] {
+    width: 300px;
+    font-size: 18px;
+    padding: 1.88% 10px;
+    border: 1px solid #f0f0f0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search_result {
+    display: none;
+    width: 360px;
+    background: none;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    padding: 11px 0 10px 0;
+    overflow: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search_result a {
+    text-decoration: none;
+    color: #000;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+.result {
+    float: left;
+    background: #4e8dab;
+    border-bottom: 2px solid darkslategrey;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+}
+
+.result:hover {
+    background: #18384c;
+    color: #f0f0f0;
+}
+
+.img {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.name {
+    width: 275px;
+    float: left;
+    text-wrap: normal;
+    padding: 5px;
 }

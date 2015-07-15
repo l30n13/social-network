@@ -104,7 +104,7 @@ a {
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     position: absolute;
-    right: 135px;
+    right: 10px;
 }
 
 #profile_triangle {
@@ -139,7 +139,7 @@ a {
     color: #000;
 }
 
-.name input[type="text"] {
+.sname input[type="text"] {
     width: 155px;
     background: #fff;
     margin-bottom: 4%;

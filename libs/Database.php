@@ -48,7 +48,7 @@ class Database extends PDO {
     /**
      * insert
      * @param string $table A name the table to insert into
-     * @param string $data An associative array
+     * @param array $data An associative array
      * @param string $where the WHERE query part
      */
     function update($table, $data, $where) {
