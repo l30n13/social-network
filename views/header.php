@@ -76,7 +76,7 @@
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
-                    <div class="profile_name" style="padding-top:3px; float: left">
+                    <div class="profile_name" style="float: left">
                         <?= Session::get('name') ?>
                     </div>
                 </div>
