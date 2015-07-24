@@ -15,10 +15,20 @@ class Profile extends Controller {
 
     function index() {
         $details = $this->model->getDetails(filter_input(INPUT_GET, 'id'));
-
-        /*   echo '<pre>';
-           print_r($details);*/
-
+        $friends = $this->model->getFriends(Session::get('profile_id'));
+        /*echo '<pre>';
+        print_r($friends);*/
+        if (isset($friends)) {
+            foreach ($friends as $f) {
+                if (in_array(filter_input(INPUT_GET, 'id'), $f)) {
+                    $this->view->is_friend = true;
+                    break;
+                } else {
+                    $this->view->is_friend = false;
+                }
+            }
+        }
+        //die;
         $name = ($details['first_name'] != null) ? $details['first_name'] . " " : "";
         $name .= ($details['middle_name'] != null) ? $details['middle_name'] . " " : "";
         $name .= ($details['last_name'] != null) ? $details['last_name'] . " " : "";

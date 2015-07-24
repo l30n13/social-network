@@ -2,7 +2,7 @@ $(function () {
     $("#search").keyup(function () {
         var search = $(this).val();
         if (search != '') {
-            $.get(window.URL + "home/jquery_search", {'search': search}, function (o) {
+            $.get(window.URL + "index/jquery_search", {'search': search}, function (o) {
                 $(".search_result").html(o).slideDown();
             });
         }

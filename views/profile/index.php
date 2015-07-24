@@ -32,10 +32,18 @@
                         </button>
                     </td>
                 </tr>
+            <?php elseif ($this->is_friend == true): ?>
+                <tr>
+                    <td colspan="2">
+                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button" id="add-friend"
+                                onclick="removeFriend(<?= $this->id ?>)">Remove Friend
+                        </button>
+                    </td>
+                </tr>
             <?php else: ?>
                 <tr>
                     <td colspan="2">
-                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button"
+                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button" id="add-friend"
                                 onclick="addFriend(<?= $this->id ?>)">Add As Friend
                         </button>
                     </td>

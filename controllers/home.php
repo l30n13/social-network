@@ -28,12 +28,4 @@ class Home extends Controller {
         Session::destroy();
         header("location: " . URL);
     }
-
-    function search() {
-        $this->view->result = $this->model->search();
-    }
-
-    function jquery_search() {
-        $this->model->jquery_search();
-    }
 }

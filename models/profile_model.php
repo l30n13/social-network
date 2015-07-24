@@ -13,6 +13,13 @@ class Profile_Model extends Model {
         return $sth->fetch();
     }
 
+    function getFriends($id) {
+        $query = "SELECT * FROM friends WHERE `profile_id` = $id ;";
+        $sth = $this->db->prepare($query);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     function saveAfterEdit($id) {
         $f_name = filter_input(INPUT_POST, 'f_name');
         $m_name = filter_input(INPUT_POST, 'm_name');

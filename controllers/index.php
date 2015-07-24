@@ -16,7 +16,7 @@ class Index extends Controller {
             $this->view->render('header');
             $this->view->render('home/index');
             $this->view->render('footer');
-        }else {
+        } else {
             $this->view->render('header');
             $this->view->render('index/index');
             $this->view->render('footer');
@@ -45,5 +45,25 @@ class Index extends Controller {
         }
         $a->closeCursor();
 
+    }
+
+    function search() {
+        $this->view->result = $this->model->search();
+        $this->view->render('header');
+        $this->view->render('search_result/index');
+        $this->view->render('footer');
+
+    }
+
+    function jquery_search() {
+        $this->model->jquery_search();
+    }
+
+    function addFriend() {
+        $this->model->addFriend(filter_input(INPUT_GET, 'id'), filter_input(INPUT_GET, 'date'));
+    }
+
+    function removeFriend(){
+        $this->model->removeFriend(filter_input(INPUT_GET, 'id'));
     }
 }

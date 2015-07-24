@@ -110,14 +110,14 @@ body {
 
 .search-box {
     float: left;
-    height: 34px;
+    height: 33px;
     padding-top: 2px;
 }
 
 .search-box input[type="search"] {
     width: 300px;
     font-size: 18px;
-    padding: 1.88% 10px;
+    padding: 1.5% 10px;
     border: 1px solid #f0f0f0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

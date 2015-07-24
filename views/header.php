@@ -35,7 +35,7 @@
         <?php if (Session::get('loggedIn') == true): ?>
             <div class="search">
                 <div class="search-box">
-                    <form action="<?= URL ?>home/search" method="get">
+                    <form action="<?= URL ?>index/search" method="get">
                         <button type="submit" class="search-icon">
                             <img src="<?= URL ?>public/images/search.png" height="20" width="20">
                         </button>
