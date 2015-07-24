@@ -63,7 +63,7 @@ class Index extends Controller {
         $this->model->addFriend(filter_input(INPUT_GET, 'id'), filter_input(INPUT_GET, 'date'));
     }
 
-    function removeFriend(){
+    function removeFriend() {
         $this->model->removeFriend(filter_input(INPUT_GET, 'id'));
     }
 }

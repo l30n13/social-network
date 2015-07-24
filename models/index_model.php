@@ -86,7 +86,7 @@ class Index_Model extends Model {
         $result = $this->db->prepare($query);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();
-        return $result->fetch();
+        return $result->fetchAll();
     }
 
     function jquery_search() {

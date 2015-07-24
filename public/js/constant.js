@@ -1,1 +1,1 @@
-window.URL="http://php.local/Social%20Network/";
+window.URL = "http://php.local/Social%20Network/";

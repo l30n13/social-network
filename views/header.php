@@ -49,7 +49,7 @@
                 <!--<a href="#">
                     <div class="result" onclick="goThisProfile()">
                         <div class="img">
-                            <img src="<?/*= URL */?>public/images/404.png" width="60" height="60">
+                            <img src="<? /*= URL */ ?>public/images/404.png" width="60" height="60">
                         </div>
                         <div class="name">
                             sdxv,x cv xx,vm cxv cx.v xc,vxm v,xcvnx, vxnm, sd,mvsdnvm,nvds,vnsv xkvnxckvnxcn v,xcnv,xnc
@@ -84,7 +84,7 @@
                     <div id="profile_triangle"></div>
 
                     <div id="profile_body">
-                        <a href="<?=URL?>profile?id=<?= Session::get('profile_id') ?>"><p>Profile</p></a>
+                        <a href="<?= URL ?>profile?id=<?= Session::get('profile_id') ?>"><p>Profile</p></a>
                         <a href="#"><p>Friends</p></a>
                         <a href="#"><p>Messages</p></a>
                         <a href="<?php echo URL; ?>home/logout"><p>Logout</p></a>
