@@ -30,7 +30,7 @@
 
 <div class="header">
     <div class="name_and_login_signup">
-        <span class="company-name">Varsity Community</span>
+        <a href="<?= URL ?>" <span class="varsity-community">Varsity Community</span></a>
 
         <?php if (Session::get('loggedIn') == true): ?>
             <div class="search">
