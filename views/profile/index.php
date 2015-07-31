@@ -1,6 +1,15 @@
 <div class="body">
     <div class="profile_img">
-        <img src="<?= URL ?>public/images/profile_picture/DSC00091.jpg" width="300" height="400 "/>
+        <?php if ($this->profile_image != null): ?>
+            <img src="<?= URL . $this->profile_image ?>" height="400" width="300"/>
+        <?php else:
+            if ($this->gender == "m"): ?>
+                <img src="<?= URL ?>public/images/male.png" height="400" width="300"/>
+            <?php else: ?>
+                <img src="<?= URL ?>public/images/female.png" height="400" width="300"/>
+            <?php endif; ?>
+        <?php endif; ?>
+        <!--<img src="<?/*= URL */?>public/images/profile_picture/DSC00091.jpg" width="300" height="400 "/>-->
     </div>
     <div class="profile_details">
         <table align="center" class="edit_option">
@@ -35,7 +44,7 @@
             <?php elseif ($this->is_friend == true): ?>
                 <tr>
                     <td colspan="2">
-                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button" id="add-friend"
+                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button"
                                 onclick="removeFriend(<?= $this->id ?>)">Remove Friend
                         </button>
                     </td>
@@ -43,7 +52,7 @@
             <?php else: ?>
                 <tr>
                     <td colspan="2">
-                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button" id="add-friend"
+                        <button style="font-size: 16px; border: 1px solid; width: auto" class="button"
                                 onclick="addFriend(<?= $this->id ?>)">Add As Friend
                         </button>
                     </td>

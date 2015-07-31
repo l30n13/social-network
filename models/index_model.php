@@ -78,15 +78,19 @@ class Index_Model extends Model {
 
     function search() {
         $search = filter_input(INPUT_GET, 'search');
-        $query = "SELECT * FROM profile WHERE
+        if ($search != null) {
+            $query = "SELECT * FROM profile WHERE
                                              `first_name` LIKE '$search%' OR
                                              `middle_name` LIKE '$search%' OR
                                              `last_name` LIKE '$search%';";
 
-        $result = $this->db->prepare($query);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-        return $result->fetchAll();
+            $result = $this->db->prepare($query);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            return $result->fetchAll();
+        } else {
+            return false;
+        }
     }
 
     function jquery_search() {
@@ -106,17 +110,24 @@ class Index_Model extends Model {
 
             echo '<a href="#">
                     <div class="result"  onclick="goThisProfile(' . $s['profile_id'] . ')">
-                        <div class="img">
-                            <img src="<?= URL ?>public/images/404.png" width="60" height="60">
-                        </div>
-                        <div class="name">' .
-                $name
-                . '</div>
+                        <div class="img">';
+            if (Session::get('image') != null):
+                echo '<img src="' . URL . Session::get('image') . '" height="60" width="60"/>';
+            else :
+                if ($s['gender'] === "m") :
+                    echo '<img src="' . URL . 'public/images/male.png" height="60" width="60"/>';
+                else :
+                    echo '<img src="' . URL . 'public/images/female.png" height="60" width="60"/>';
+                endif;
+            endif;
+            echo '</div>
+                        <div class="name">' . $name . '</div>
                     </div>
                   </a>';
         }
     }
 
+    /*<img src="<?= URL ?>public/images/404.png" width="60" height="60">*/
     /**
      * @param string $friend_id uses for adding a friend into friend list
      * @param string $date uses for remind when the friend is added

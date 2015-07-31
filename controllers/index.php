@@ -13,9 +13,7 @@ class Index extends Controller {
         $logged = Session::get('loggedIn');
 
         if ($logged == true) {
-            $this->view->render('header');
-            $this->view->render('home/index');
-            $this->view->render('footer');
+            header('location:' . URL . "home");
         } else {
             $this->view->render('header');
             $this->view->render('index/index');
@@ -50,6 +48,8 @@ class Index extends Controller {
     function search() {
         $this->view->result = $this->model->search();
         $this->view->render('header');
+        $this->view->friends = Common_Functions::getAllFriends();
+        $this->view->render('online_friend');
         $this->view->render('search_result/index');
         $this->view->render('footer');
 

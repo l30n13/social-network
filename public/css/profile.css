@@ -1,7 +1,9 @@
 .body {
-    width: 980px;
+    width: auto;
+    height: 100%;
     margin: 0 auto;
     margin-top: 20px;
+    margin-left: 40px;
 }
 
 .profile_img {
@@ -23,6 +25,7 @@
     font-size: 18px;
     width: 100%;
     float: left;
+    margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     /*border: 1px solid;*/

@@ -20,8 +20,11 @@ a {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-    transition: background .3s;
     -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
 }
 
 .button:hover {
@@ -133,8 +136,11 @@ a {
 
 #profile_body p:hover {
     border: 2px solid;
-    transition: background .3s;
     -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
     background: cornsilk;
     color: #000;
 }

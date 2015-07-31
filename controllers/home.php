@@ -17,8 +17,9 @@ class Home extends Controller {
     function index() {
         $this->view->title = 'Home';
         $this->view->msg = 'Welcome to your home page';
-
+        $this->view->friends = Common_Functions::getAllFriends();
         $this->view->render('header');
+        $this->view->render('online_friend');
         $this->view->render('home/index');
         $this->view->render('footer');
     }

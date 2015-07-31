@@ -38,9 +38,14 @@ class Profile extends Controller {
         $this->view->address = $details['address'];
         $this->view->contact_no = $details['contact_no'];
         $this->view->email_id = $details['email_id'];
+
         $this->view->profile_image = $details['profile_image'];
 
+        $this->view->gender = $details['gender'];
+
         $this->view->render('header');
+        $this->view->friends = Common_Functions::getAllFriends();
+        $this->view->render('online_friend');
         $this->view->render('profile/index');
         $this->view->render('footer');
     }
@@ -64,6 +69,8 @@ class Profile extends Controller {
         $this->view->profile_image = $details['profile_image'];
 
         $this->view->render('header');
+        $this->view->friends = Common_Functions::getAllFriends();
+        $this->view->render('online_friend');
         $this->view->render('profile/edit');
         $this->view->render('footer');
     }
