@@ -30,7 +30,7 @@ class Index extends Controller {
     }
 
     function create_db() {
-        $this->connect = new PDO("mysql:host=localhost; dbname=" . DB_NAME, DB_USER, DB_PASS);
+        $this->connect = new PDO("mysql:host=" . DB_HOST . "; dbname=" . DB_NAME, DB_USER, DB_PASS);
         $a = $this->connect->query("SELECT
                                       TABLE_NAME
                                     FROM information_schema.TABLES

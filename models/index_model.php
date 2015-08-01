@@ -31,6 +31,7 @@ class Index_Model extends Model {
             Session::set('profile_id', $data['profile_id']);
             Session::set('email', $data['email_id']);
             Session::set('name', $name);
+            Session::set('image', $data['profile_image']);
             Session::set('gender', $data['gender']);
             Session::set('loggedIn', true);
             header('location:' . URL . 'home');

@@ -43,7 +43,9 @@ class Profile_Model extends Model {
 
         $image = 'public/images/users/' . Session::get('profile_id') . '/profile_image/' .
             Session::get('profile_id') . '_profile_pic.' . $extension;
-
+        if (file_exists($image)) {
+            unlink($image);
+        }
         copy($temp_image_name, $image);
 
 
