@@ -13,16 +13,16 @@
     <div class="profile_details">
         <form action="<?= URL ?>profile/saveAfterEdit" method="post" enctype="multipart/form-data">
             <div class="profile_img" style="float:left;">
-                <?php if (Session::get('image') != null): ?>
-                    <img src="<?= URL . Session::get('image') ?>" height="400" width="300"/>
+                <?php if ($this->profile_image != null): ?>
+                    <img src="<?= URL . $this->profile_image ?>" height="400" width="300"/>
                 <?php else:
                     if (Session::get('gender') == "m"): ?>
-                        <img src="<?= URL ?>public/images/male.png" height="400" width="300" />
+                        <img src="<?= URL ?>public/images/male.png" height="400" width="300"/>
                     <?php else: ?>
                         <img src="<?= URL ?>public/images/female.png" height="400" width="300"/>
                     <?php endif; ?>
                 <?php endif; ?>
-                <!--<img src="<?/*= URL */?>public/images/profile_picture/DSC00091.jpg" width="300" height="400 "/>-->
+                <!--<img src="<? /*= URL */ ?>public/images/profile_picture/DSC00091.jpg" width="300" height="400 "/>-->
                 <!--<button type="file">Upload Image</button>-->
                 <input type="file" name="image"/>
             </div>

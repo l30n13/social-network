@@ -72,6 +72,10 @@ class Index_Model extends Model {
 
             echo('<script>alert("Signed up successfully");</script>');
 
+            $aa = '' . URL . 'public/images/users/' . $this->db->lastInsertId() . '/profile_image';
+            echo $aa . '<br>';
+            echo $_SERVER['DOCUMENT_ROOT'] . '<br>';
+            mkdir('public/images/users/' . $this->db->lastInsertId() . '/profile_image', 0777, true);
             header("location:" . URL);
         }
     }

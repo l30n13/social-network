@@ -35,14 +35,17 @@ class Profile_Model extends Model {
         $email = filter_input(INPUT_POST, 'email');
 
         //Image upload
-        $temp_image_name = basename($_FILES['image']['tmp_name']);
+        $temp_image_name = $_FILES['image']['tmp_name'];
+        echo $temp_image_name;
         $path = pathinfo($_FILES['image']['name']);
-        $extension = $path['extension'];
-        $t = new DateTime();
-        $destination = URL . 'public/images/users/' . Session::get('profiel_id') . 'profile_image/';
 
-        copy($temp_image_name, $destination);
-        die;
+        $extension = $path['extension'];
+
+        $image = 'public/images/users/' . Session::get('profile_id') . '/profile_image/' .
+            Session::get('profile_id') . '_profile_pic.' . $extension;
+
+        copy($temp_image_name, $image);
+
 
         $allData = array(
             'first_name' => $f_name,
