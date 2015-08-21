@@ -116,8 +116,8 @@ class Index_Model extends Model {
             echo '<a href="#">
                     <div class="result"  onclick="goThisProfile(' . $s['profile_id'] . ')">
                         <div class="img">';
-            if (Session::get('image') != null):
-                echo '<img src="' . URL . Session::get('image') . '" height="60" width="60"/>';
+            if ($s['profile_image'] != null):
+                echo '<img src="' . URL . $s['profile_image'] . '" height="60" width="60"/>';
             else :
                 if ($s['gender'] === "m") :
                     echo '<img src="' . URL . 'public/images/male.png" height="60" width="60"/>';

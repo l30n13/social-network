@@ -67,7 +67,7 @@
                 <div class="profile_">
                     <div class="profile_image" style="float: left; margin-right: 10px;">
                         <?php if (Session::get('image') != null): ?>
-                            <img src="<?= URL . Session::get('image') ?>" height="25" width="25"/>
+                            <img src="<?= URL . Session::get('image') ?>" height="25" width="25" style="border-radius: 50%"/>
                         <?php else:
                             if (Session::get('gender') == "m"): ?>
                                 <img src="<?= URL ?>public/images/male.png" height="25" width="25"/>
@@ -85,8 +85,8 @@
 
                     <div id="profile_body">
                         <a href="<?= URL ?>profile?id=<?= Session::get('profile_id') ?>"><p>Profile</p></a>
-                        <a href="#"><p>Friends</p></a>
-                        <a href="#"><p>Messages</p></a>
+                        <!--<a href="#"><p>Friends</p></a>-->
+                        <a href="<?= URL ?>message"><p>Messages</p></a>
                         <a href="<?php echo URL; ?>home/logout"><p>Logout</p></a>
                     </div>
                 </div>

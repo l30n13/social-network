@@ -28,7 +28,7 @@
     }
 
     .search_ {
-        padding: 20px 0 20px 20px;
+        padding: 20px 0 20px 0;
         float: left;
         font-size: 20px;
     }
@@ -45,14 +45,25 @@
             echo '<a href="#">
                         <div class="main_search_result" onclick="goThisProfile(' . $r['profile_id'] . ')">
                             <div class="profile_img">
-                                <img src="' . URL . 'public/images/404.png" width="80" height="80"/>
-                            </div>
-                            <div class="search_">
+                                ';
+
+            if ($r['profile_image'] != null):
+                echo '<img src="' . URL . $r['profile_image'] . '" height="60" width="60"/>';
+            else :
+                if ($r['gender'] === "m") :
+                    echo '<img src="' . URL . 'public/images/male.png" height="60" width="60"/>';
+                else :
+                    echo '<img src="' . URL . 'public/images/female.png" height="60" width="60"/>';
+                endif;
+            endif;
+
+            echo '</div >
+                            <div class="search_" >
                                 ' . $name . '
-                            </div>
-                        </div>
-                  </a>
-                  <div class="clear"></div>';
+                            </div >
+                        </div >
+                  </a >
+                  <div class="clear" ></div > ';
         }
     }
     //echo "<pre>";

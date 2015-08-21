@@ -38,3 +38,7 @@ function removeFriend(id) {
     location = window.URL + "index/removeFriend?id=" + id;
     alert("Friend removed successfully");
 }
+
+function doChat(profile_id) {
+    location = window.URL + "message?profile_id=" + profile_id;
+}

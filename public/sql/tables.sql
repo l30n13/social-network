@@ -34,11 +34,11 @@ CREATE TABLE `friends` (
 );
 
 CREATE TABLE `chat` (
-  `chat_id`      INT           NOT NULL AUTO_INCREMENT,
-  `chat_with`    INT           NOT NULL,
-  `chat_message` VARCHAR(5000) NOT NULL,
-  `chat_date`    VARCHAR(11)   NOT NULL,
-  `chat_time`    TIME          NOT NULL,
+  `chat_id`      INT  NOT NULL AUTO_INCREMENT,
+  `profile_id`   INT  NOT NULL,
+  `chat_with`    INT  NOT NULL,
+  `chat_message` TEXT NOT NULL,
+  `chat_time`    INT  NOT NULL,
   PRIMARY KEY (`chat_id`)
 );
 

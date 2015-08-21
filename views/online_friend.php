@@ -35,7 +35,7 @@
                 <img src="';
         /*-----image start-------*/
         if ($friend['profile_image'] != null):
-            echo $friend['profile_image'];
+            echo URL . $friend['profile_image'];
         else:
             if ($friend['gender'] === "m"):
                 echo URL . 'public/images/male.png" height = "30" width = "30" ';
@@ -44,7 +44,7 @@
             endif;
         endif;
         /*-----image end-------*/
-        echo '" style="float:left; margin-right:5px;" />
+        echo '" style="float:left; margin-right:5px; border-radius: 50%;" height = "30" width = "30" />
                 ' . $friend['name'] . '
             </div>
             </a>
